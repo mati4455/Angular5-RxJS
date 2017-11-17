@@ -3,9 +3,15 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-12 col-md-3">
-            <div class="nav nav-pills">
+            <div class="nav nav-pills mb-3">
                 <a class="nav-link" routerLink="/">Home</a>
                 <a class="nav-link" routerLinkActive="active" routerLink="/subject-subscription">Subject + Subscription</a>
+            </div>
+            <div class="card bg-light mb-3" *ngIf="message">
+                <div class="card-header">Information</div>
+                <div class="card-body">
+                    <p class="card-text">{{message.message}}</p>
+                </div>
             </div>
         </div>
         <div class="col-12 col-md-9">

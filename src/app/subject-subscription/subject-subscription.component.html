@@ -1,3 +1,16 @@
-<p>
-  subject-subscription works!
-</p>
+<div class="mb-3">
+    <label for="messageInput">Send new message:</label>
+    <div class="input-group">
+        <input type="text" id="messageInput" class="form-control" #messageInput />
+        <span class="input-group-btn">
+            <button class="btn btn-success" type="button"
+                (click)="sendMessage(messageInput.value)">Send message</button>
+            <button class="btn btn-danger" type="button" (click)="messageInput.value='';clearMessage()">Clear message</button>
+        </span>
+    </div>
+</div>
+
+<div class="alert alert-success" *ngIf="message">
+    <h4 class="alert-heading">Information</h4>
+    {{message.message}}
+</div>

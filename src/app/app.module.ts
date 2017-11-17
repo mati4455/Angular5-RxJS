@@ -6,19 +6,22 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutes } from './app.routes';
 import { SubjectSubscriptionComponent } from './subject-subscription/subject-subscription.component';
 import { HomeComponent } from './home/home.component';
+import { MessageService } from './services/message.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavigationComponent,
-    SubjectSubscriptionComponent,
-    HomeComponent
-],
+        SubjectSubscriptionComponent,
+        HomeComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutes
     ],
-    providers: [],
+    providers: [
+        MessageService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
