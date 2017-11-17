@@ -1,14 +1,101 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>LightningTalkRxjs</title>
+  <title>LightningTalk: Angular5 + RxJS</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <style>
+    <!--
+    /** loader inline, aby był widoczny od razu po włączeniu strony **/
+
+    #loader {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+      background: rgba(255, 255, 255, .6);
+      align-items: center;
+      justify-content: center;
+    }
+
+    @-webkit-keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #loader>div {
+      margin: 0px auto 75px;
+      width: 150px;
+      height: 150px;
+      display: block;
+      overflow: hidden;
+    }
+
+    #loader>div div {
+      height: 100%;
+    }
+
+    #loader>div,
+    #loader>div div {
+      border-radius: 50%;
+      padding: 10px;
+      border: 3px solid transparent;
+      animation: rotate linear 5s infinite;
+      border-top-color: #444444;
+      border-left-color: #146eaf;
+      animation-timing-function: cubic-bezier(0.55, 0.38, 0.21, 0.88);
+      animation-duration: 4s;
+    }
+
+    #loader>div {
+      will-change: transform;
+    }
+
+    -->
+  </style>
 </head>
+
 <body>
   <app-root></app-root>
+  <div id="loader">
+    <div>
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
