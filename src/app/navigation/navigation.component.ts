@@ -13,6 +13,12 @@ export class NavigationComponent implements OnInit, OnDestroy {
     message: MessageModel;
     subscription: Subscription;
 
+    menuItems: any[] = [
+        { label: 'Home', url: '/home' },
+        { label: 'Subject + Subscription', url: '/subject-subscription' },
+        { label: 'Search with delay', url: '/search-delay' }
+    ];
+
     constructor(
         private cartService: MessageService
     ) {

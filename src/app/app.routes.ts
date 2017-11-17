@@ -10,6 +10,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
+                redirectTo: 'home',
+                pathMatch: 'full'
+            },
+            {
+                path: 'home',
                 component: HomeComponent
             },
             {
@@ -18,11 +23,10 @@ export const routes: Routes = [
             }
         ]
     },
-    /*
     {
         path: '**',
-        component: NotFoundComponent
-    }*/
+        redirectTo: '/home'
+    }
 ];
 
 export const AppRoutes = RouterModule.forRoot(routes);

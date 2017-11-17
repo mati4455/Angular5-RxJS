@@ -1,7 +1,7 @@
 <div class="mb-3">
     <label for="messageInput">Send new message:</label>
     <div class="input-group">
-        <input type="text" id="messageInput" class="form-control" #messageInput />
+        <input type="text" placeholder="Enter text..." id="messageInput" class="form-control" #messageInput />
         <span class="input-group-btn">
             <button class="btn btn-success" type="button"
                 (click)="sendMessage(messageInput.value)">Send message</button>
@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div class="alert alert-success" *ngIf="message">
+<div class="alert alert-success mt-5" *ngIf="message">
     <h4 class="alert-heading">Information</h4>
     {{message.message}}
 </div>
