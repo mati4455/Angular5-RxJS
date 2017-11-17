@@ -16,7 +16,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
     menuItems: any[] = [
         { label: 'Home', url: '/home' },
         { label: 'Subject + Subscription', url: '/subject-subscription' },
-        { label: 'Search with delay', url: '/search-delay' }
+        { label: 'Search with delay', url: '/search-delay' },
+        { label: 'Useful operators', url: '/operators' },
     ];
 
     constructor(

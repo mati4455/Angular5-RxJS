@@ -1,0 +1,28 @@
+<h3>Method scan - accumulate values</h3>
+<label for="numberInput">Add number:</label>
+<div class="input-group">
+    <input type="number" placeholder="Enter number..." id="numberInput" class="form-control" #numberInput />
+    <span class="input-group-btn">
+        <button class="btn btn-success" type="button" (click)="addNumber(numberInput.value)">Add number</button>
+        <button class="btn btn-danger" type="button" (click)="numberInput.value='';clearSum()">Clear sum</button>
+    </span>
+</div>
+<div class="alert alert-info mt-3 mb-5">
+    Sum: {{sum}}
+</div>
+
+<h3>Method scan - accumulate object's properties</h3>
+<label for="propertyInput">Add property:</label>
+<div class="input-group">
+    <input type="text" placeholder="Property name..." id="propertyInput" class="form-control" #propertyInput />
+    <input type="text" placeholder="Property value..." id="propertyValueInput" class="form-control" #propertyValueInput />
+    <span class="input-group-btn">
+        <button class="btn btn-success" type="button"
+            (click)="addProperty(propertyInput.value, propertyValueInput.value);propertyInput.value='';propertyValueInput.value='';">Add property</button>
+        <button class="btn btn-danger" type="button"
+            (click)="propertyInput.value='';propertyValueInput.value='';clearObject()">Clear object</button>
+    </span>
+</div>
+<div class="alert alert-info mt-3 mb-5">
+    <pre class="mb-0">{{obj | json}}</pre>
+</div>

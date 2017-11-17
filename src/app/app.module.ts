@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MessageService } from './services/message.service';
 import { SearchDelayComponent } from './search-delay/search-delay.component';
 import { SearchService } from './services/search.service';
+import { OperatorsComponent } from './operators/operators.component';
 
 @NgModule({
     declarations: [
@@ -17,8 +18,9 @@ import { SearchService } from './services/search.service';
         NavigationComponent,
         SubjectSubscriptionComponent,
         HomeComponent,
-        SearchDelayComponent
-    ],
+        SearchDelayComponent,
+    OperatorsComponent
+],
     imports: [
         BrowserModule,
         HttpClientModule,

@@ -3,6 +3,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SubjectSubscriptionComponent } from './subject-subscription/subject-subscription.component';
 import { HomeComponent } from './home/home.component';
 import { SearchDelayComponent } from './search-delay/search-delay.component';
+import { OperatorsComponent } from './operators/operators.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,10 @@ export const routes: Routes = [
             {
                 path: 'search-delay',
                 component: SearchDelayComponent
+            },
+            {
+                path: 'operators',
+                component: OperatorsComponent
             }
         ]
     },
