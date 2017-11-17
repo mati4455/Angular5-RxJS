@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SubjectSubscriptionComponent } from './subject-subscription/subject-subscription.component';
 import { HomeComponent } from './home/home.component';
+import { SearchDelayComponent } from './search-delay/search-delay.component';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,10 @@ export const routes: Routes = [
             {
                 path: 'subject-subscription',
                 component: SubjectSubscriptionComponent
+            },
+            {
+                path: 'search-delay',
+                component: SearchDelayComponent
             }
         ]
     },
