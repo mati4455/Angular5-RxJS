@@ -4,6 +4,7 @@ import { SubjectSubscriptionComponent } from './subject-subscription/subject-sub
 import { HomeComponent } from './home/home.component';
 import { SearchDelayComponent } from './search-delay/search-delay.component';
 import { OperatorsComponent } from './operators/operators.component';
+import { CombineComponent } from './combine/combine.component';
 
 export const routes: Routes = [
     {
@@ -30,6 +31,10 @@ export const routes: Routes = [
             {
                 path: 'operators',
                 component: OperatorsComponent
+            },
+            {
+                path: 'combine-observables',
+                component: CombineComponent
             }
         ]
     },

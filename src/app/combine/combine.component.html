@@ -1,0 +1,11 @@
+<h1>combineLatest method</h1>
+
+<button type="button" class="btn btn-dark mb-3" (click)="startGame()">Start</button>
+
+<div class="alert alert-primary text-center area py-5" id="click-area">
+    clickable area
+</div>
+
+<div class="alert alert-info" *ngIf="result">
+    You have clicked {{result}} time(s) in 3 seconds
+</div>

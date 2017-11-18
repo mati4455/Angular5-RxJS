@@ -18,6 +18,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
         { label: 'Subject + Subscription', url: '/subject-subscription' },
         { label: 'Search with delay', url: '/search-delay' },
         { label: 'Useful operators', url: '/operators' },
+        { label: 'Combined observables', url: '/combine-observables' }
     ];
 
     constructor(

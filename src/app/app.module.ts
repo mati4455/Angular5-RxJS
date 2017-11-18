@@ -11,6 +11,7 @@ import { MessageService } from './services/message.service';
 import { SearchDelayComponent } from './search-delay/search-delay.component';
 import { SearchService } from './services/search.service';
 import { OperatorsComponent } from './operators/operators.component';
+import { CombineComponent } from './combine/combine.component';
 
 @NgModule({
     declarations: [
@@ -19,8 +20,9 @@ import { OperatorsComponent } from './operators/operators.component';
         SubjectSubscriptionComponent,
         HomeComponent,
         SearchDelayComponent,
-    OperatorsComponent
-],
+        OperatorsComponent,
+        CombineComponent
+    ],
     imports: [
         BrowserModule,
         HttpClientModule,
