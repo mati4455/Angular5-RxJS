@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class CombineComponent implements OnInit {
 
-    result;
+    result = -1;
 
     combined$: Observable<any>;
     subscription: Subscription;
@@ -38,8 +38,7 @@ export class CombineComponent implements OnInit {
 
     startGame() {
         const me = this;
-        me.result = null;
-
+        me.result = -1;
         me.subscription = me.combined$.subscribe(res => {
             me.result = res[1];
             console.log('You have clicked ' + me.result + ' time(s) in 3 sec');
