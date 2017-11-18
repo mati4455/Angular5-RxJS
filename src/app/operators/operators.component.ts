@@ -13,11 +13,11 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 export class OperatorsComponent implements OnInit, OnDestroy {
 
     sum: number;
-    private subject = new Subject<number>();
+    private subject$ = new Subject<number>();
     private subscription: Subscription;
 
     obj: Object;
-    private subjectObject = new Subject<Object>();
+    private subjectObject$ = new Subject<Object>();
     private subscriptionObject: Subscription;
 
     ngOnInit() {
@@ -35,7 +35,7 @@ export class OperatorsComponent implements OnInit, OnDestroy {
     /** sum numbers **/
     addNumber(number: number): void {
         const me = this;
-        me.subject.next(+number);
+        me.subject$.next(+number);
     }
 
     clearSum(): void {
@@ -46,7 +46,7 @@ export class OperatorsComponent implements OnInit, OnDestroy {
 
     getSubscription(): Subscription {
         const me = this;
-        return me.subscription = me.subject
+        return me.subscription = me.subject$
             .startWith(0)
             .scan((sum: number, curr: number) => sum + curr)
             .subscribe(sum => {
@@ -60,7 +60,7 @@ export class OperatorsComponent implements OnInit, OnDestroy {
 
     addProperty(name: string, value: any): void {
         const me = this;
-        me.subjectObject.next({
+        me.subjectObject$.next({
             [name]: value
         });
     }
@@ -73,7 +73,7 @@ export class OperatorsComponent implements OnInit, OnDestroy {
 
     getObjectSubscription(): Subscription {
         const me = this;
-        return me.subscription = me.subjectObject
+        return me.subscription = me.subjectObject$
             .startWith({})
             .scan((obj: Object, property: any) => Object.assign(obj, property))
             .subscribe(obj => {

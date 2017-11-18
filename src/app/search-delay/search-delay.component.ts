@@ -14,7 +14,7 @@ export class SearchDelayComponent implements OnInit, OnDestroy {
 
     results: string[];
 
-    searchText = new Subject<string>();
+    searchText$ = new Subject<string>();
     searchSubscription: Subscription;
 
     constructor(
@@ -22,7 +22,7 @@ export class SearchDelayComponent implements OnInit, OnDestroy {
     ) {
         const me = this;
         me.searchSubscription = me.searchService
-            .search(me.searchText)
+            .search(me.searchText$)
             .subscribe(results => {
                 me.results = results;
                 console.log('search results recived');
