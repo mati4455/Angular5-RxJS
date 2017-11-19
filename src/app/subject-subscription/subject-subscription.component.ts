@@ -14,10 +14,10 @@ export class SubjectSubscriptionComponent implements OnInit, OnDestroy {
     subscription: Subscription;
 
     constructor(
-        private cartService: MessageService
+        private messageService: MessageService
     ) {
         const me = this;
-        me.subscription = me.cartService
+        me.subscription = me.messageService
             .getMessage()
             .subscribe((message: MessageModel) => {
                 me.message = message;
@@ -35,11 +35,11 @@ export class SubjectSubscriptionComponent implements OnInit, OnDestroy {
 
     sendMessage(message: string): void {
         const me = this;
-        me.cartService.sendMessage(message);
+        me.messageService.sendMessage(message);
     }
 
     clearMessage(): void {
         const me = this;
-        me.cartService.clearMessage();
+        me.messageService.clearMessage();
     }
 }
